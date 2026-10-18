@@ -1,10 +1,21 @@
-# 2. Roadmap
+# Technical Roadmap & Milestones
 
-- v0.1 — Personality sliders mapped to prompt + style rules, with tests.
-- v0.2 — Voice commands to change settings.
-- v0.3 — Desktop app with TARS-style UI.
-- v0.4 — Robot body prototype.
+The development of **TARS Personality AI Conversational Robot** is organized into four strategic milestones:
 
-## Notes for contributors / LLM agents
-- Treat each slider as a testable contract: write example prompts and expected tone for 0, 50 and 100.
-- Share the voice pipeline with `baymax-ai-companion` instead of building two.
+## Milestone Breakdown
+
+### Milestone v0.1 — Foundation & Core Scaffolding
+* **Objective:** Dynamic prompt synthesizer modulating Humor (0-100%) and Honesty (90-100%).
+* **Deliverables:** Core architecture, basic pipeline, standard documentation, and CI integration.
+
+### Milestone v0.2 — Feature Expansion & Deep Pipelines
+* **Objective:** Terminal-based Monospace retro UI reminiscent of the Endurance onboard computer.
+* **Deliverables:** Multimodal ingestion, expanded domain models, and automated test suites.
+
+### Milestone v0.3 — Intelligence, Refinement & Safety
+* **Objective:** Offline speech synthesis with robotic cadence and mono-frequency audio filter.
+* **Deliverables:** Advanced evaluation logic, heuristic calibration, and performance profiling.
+
+### Milestone v0.4 — Production Readiness & Ecosystem Integration
+* **Objective:** Autonomous task decomposition mode with candid mission status reports.
+* **Deliverables:** Client UI / CLI tooling, cloud deployment manifests, and partner integrations.

@@ -1,17 +1,25 @@
-# 1. Architecture
+# Architecture & System Design
 
-1. Personality model: honesty, humor and discretion values (0-100) compiled into the system prompt and response style rules.
-2. Voice front end shared with the Baymax companion idea.
-3. Settings UI: "TARS, set humor to 60%" by voice, plus sliders in an app.
-4. Robot phase: servo-driven block body, controlled over serial from the same software.
+This document details the system design, components, and communication topology of **TARS Personality AI Conversational Robot**.
 
-## Proposed stack
-- TypeScript or Python voice agent
-- LLM with structured style controls
-- Web settings panel
-- Later: ESP32 + servos
+```mermaid
+flowchart TD
+    Client["Client / User Interface"] --> Core["Core Processing Engine"]
+    Core --> Ingestion["Data Ingestion & Adapters"]
+    Core --> Persistence["Storage / Cache Layer"]
+    Core --> Verification["Validation & Safety Layer"]
+```
 
-## Open bases to fork
-- [pipecat-ai/pipecat](https://github.com/pipecat-ai/pipecat) — Real-time voice agent framework.
-- [rhasspy/piper](https://github.com/rhasspy/piper) — Local TTS; pick a dry, robotic voice.
-- [openai/whisper](https://github.com/openai/whisper) — Speech-to-text.
+## Core Subsystems
+
+### 1. Ingestion & Preprocessing
+Handles raw input data, validates schema compliance, normalizes inputs, and eliminates malformed requests.
+
+### 2. Processing & Business Logic
+Executes the primary business logic and domain processing pipelines efficiently and deterministically.
+
+### 3. Verification & Safety Guards
+Enforces safety rules, sanitizes data structures, and validates output integrity before presentation.
+
+### 4. Storage & State Management
+Maintains persistent state, caches hot queries, and guarantees data durability.
